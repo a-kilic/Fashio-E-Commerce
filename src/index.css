@@ -13,3 +13,21 @@ body {
 .hero-container {
   width: 100%;
 }
+
+.stroke {
+  -webkit-text-stroke: 1px black;
+}
+
+.icon-stroke {
+  -webkit-text-stroke: 1px white;
+}
+
+.img-slider-icon:hover {
+  animation: squish 200ms ease-in-out;
+}
+
+@keyframes squish {
+  50% {
+    scale: 1.4 0.6;
+  }
+}
