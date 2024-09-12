@@ -1,5 +1,4 @@
-import { useState } from "react";
-import HeroImg from "../assets/woman-with-jewelery.jpg";
+import { useState, useEffect } from "react";
 import { heroData } from "./Data";
 
 const Hero = () => {
@@ -15,8 +14,21 @@ const Hero = () => {
     );
   };
 
+  useEffect(() => {
+    const intervalId = setInterval(nextImage, 5000);
+    return () => clearInterval(intervalId);
+  }, [currentImage]);
+
+  const {
+    caption,
+    "background-color": bgColor,
+    icons,
+  } = heroData[currentImage];
+
   return (
-    <section className="bg-orange-500 hero-background">
+    <section
+      className={`hero-background ${bgColor} transition-colors duration-500 ease-linear`}
+    >
       <div className="flex flex-col w-11/12 h-full mx-auto lg:w-full sm:max-w-5xl lg:max-w-5xl xl:max-w-6xl">
         {/* Text and Buttons */}
         <div className="mt-5 mb-5">
@@ -24,14 +36,14 @@ const Hero = () => {
             Where would you like to start?
           </h2>
           <div className="flex">
-            <button className="w-full p-2 mr-2 font-bold text-white bg-black">
+            <button className="w-full p-2 mr-2 font-bold text-white bg-black hover:opacity-90">
               Men
             </button>
-            <button className="w-full p-2 mr-2 font-bold text-white bg-black">
+            <button className="w-full p-2 mr-2 font-bold text-white bg-black hover:opacity-90">
               Woman
             </button>
-            <button className="w-full p-2 font-bold text-white bg-black">
-              Jewelery
+            <button className="w-full p-2 font-bold text-white bg-black hover:opacity-90">
+              Jewelry
             </button>
           </div>
         </div>
@@ -44,9 +56,9 @@ const Hero = () => {
                 <img
                   key={id}
                   src={image.img}
-                  alt={image.name}
-                  className="object-cover w-full h-full duration-300 ease-in-out shrink-0 grow-0 transition-translate"
-                  style={{ translate: `${-100 * currentImage}%` }}
+                  alt={image.alt}
+                  className="object-cover w-full h-full transition-transform duration-300 ease-in-out shrink-0 grow-0"
+                  style={{ transform: `translateX(${-100 * currentImage}%)` }}
                 />
               ))}
             </div>
@@ -83,25 +95,16 @@ const Hero = () => {
           {/* Icons and Caption */}
           <div className="flex flex-col justify-center mt-10 md:w-1/3 md:mt-0">
             <div className="flex justify-center space-x-4">
-              <i
-                className="text-5xl fa-regular fa-credit-card"
-                title="Card"
-              ></i>
-              <i
-                className="text-5xl fa-brands fa-amazon-pay"
-                title="Amazon-Pay"
-              ></i>
-              <i
-                className="text-5xl fa-regular fa-money-bill-1"
-                title="Money Bill"
-              ></i>
+              {icons.map((icon, id) => (
+                <i
+                  key={id}
+                  className={`text-5xl fa-solid ${icon} transition-opacity duration-500 ease-in-out opacity-100`}
+                ></i>
+              ))}
             </div>
-            <div className="mt-5">
+            <div className="mt-5 transition-opacity duration-500 ease-in-out opacity-100">
               <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl md:text-4">
-                Easy ways to pay
-              </h1>
-              <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl md:text-4">
-                More choices, less chore
+                {caption}
               </h1>
             </div>
           </div>
