@@ -11,10 +11,10 @@ const Navbar = () => {
           <button className="nav-icon">
             <i className="text-2xl fa-regular fa-user"></i>
           </button>
-          <button className="nav-icon">
+          <button className="nav-icon" title="Wish list">
             <i className="text-2xl fa-regular fa-heart"></i>
           </button>
-          <button className="nav-icon">
+          <button className="nav-icon" title="Shopping Cart">
             <i className="text-2xl fa-solid fa-cart-shopping"></i>
           </button>
         </div>
@@ -33,7 +33,10 @@ const Navbar = () => {
               <li className="font-medium hover:underline">Jewelery</li>
             </a>
           </ul>
-          <button className="bg-white border-t border-b border-r lg:hidden">
+          <button
+            className="bg-white border-t border-b border-r lg:hidden"
+            title="Open Menu"
+          >
             <i className="pl-2 pr-2 text-3xl fa-solid fa-bars"></i>
           </button>
           <input
@@ -41,7 +44,7 @@ const Navbar = () => {
             placeholder="Search"
             className="w-full p-3 border-t border-b border-l outline-none lg:w-auto lg:ml-auto"
           />
-          <button className="pr-2 border-t border-b border-r">
+          <button className="pr-2 border-t border-b border-r" title="Search">
             <i className="text-2xl fa-solid fa-magnifying-glass"></i>
           </button>
         </form>
