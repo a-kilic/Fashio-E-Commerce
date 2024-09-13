@@ -43,7 +43,7 @@ const Hero = () => {
               Woman
             </button>
             <button className="w-full p-2 font-bold text-white bg-black hover:opacity-90">
-              Jewelry
+              Jewelery
             </button>
           </div>
         </div>
