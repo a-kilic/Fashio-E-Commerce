@@ -1,12 +1,14 @@
 // import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-import Data from "./components/Data";
 import Hero from "./components/Hero";
+import Testimonials from "./components/Testimonials";
+
 const App = () => {
   return (
     <>
       <Navbar />
       <Hero />
+      <Testimonials />
     </>
   );
 };

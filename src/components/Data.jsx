@@ -2,6 +2,10 @@ import HeroImg1 from "../assets/woman-with-flowers.jpg";
 import HeroImg2 from "../assets/woman-throwing-hair.jpg";
 import HeroImg3 from "../assets/man-sitting-blue.jpg";
 import HeroImg4 from "../assets/jewelery.jpg";
+import Portrait1 from "../assets/portrait1.jpg";
+import Portrait2 from "../assets/portrait2.jpg";
+import Portrait3 from "../assets/portrait3.jpg";
+import Portrait4 from "../assets/portrait4.jpg";
 
 // Fetch All Products
 const fetchData = async () => {
@@ -31,7 +35,7 @@ export const heroData = [
     id: 2,
     img: HeroImg2,
     alt: "Woman throwing her hair around",
-    caption: "Modern Classics for the Modern Woman",
+    caption: "Modern Classics for Her",
     "background-color": "bg-green-500",
     icons: ["fa-chess-queen", "fa-venus", "fa-eye"],
   },
@@ -54,3 +58,40 @@ export const heroData = [
 ];
 
 console.log(heroData);
+
+// Testimonials Data
+
+export const TestimonialsData = [
+  {
+    id: 1,
+    name: "Sophia M.",
+    img: Portrait1,
+    alt: "Portrait woman with glasses",
+    text: "I’ve never felt more confident in my wardrobe! The quality and fit of these clothes are top-notch, and they always keep me on-trend. Highly recommend!",
+    delay: 0.2,
+  },
+  {
+    id: 2,
+    name: "Olivia T",
+    img: Portrait2,
+    alt: "Portrait woman with strawhat",
+    text: "Shopping here has transformed my style. The pieces are both fashionable and comfortable, and the customer service is exceptional. I’m a loyal fan now!",
+    delay: 0.2,
+  },
+  {
+    id: 3,
+    name: "Michael B.",
+    img: Portrait3,
+    alt: "Portrait man with beard",
+    text: "The craftsmanship is impressive. High-quality materials and precise stitching make for durable, stylish pieces. I'm thoroughly satisfied!",
+    delay: 0.2,
+  },
+  {
+    id: 4,
+    name: "Ryan C.",
+    img: Portrait4,
+    alt: "Portrait man with cap",
+    text: "The fit and design are superb. Modern tailoring and quality fabrics ensure both comfort and style. This brand is now my top choice!",
+    delay: 0.2,
+  },
+];
