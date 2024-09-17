@@ -50,7 +50,7 @@ const Hero = () => {
         {/* Image and Icons/Caption Wrapper */}
         <div className="flex flex-col md:flex-row md:space-x-4">
           {/* Image and Buttons*/}
-          <div className="relative flex justify-center img-wrapper md:w-2/3">
+          <div className="relative flex justify-center img-wrapper md:w-2/3 h-[30rem]">
             <div className="flex w-full h-full overflow-hidden">
               {heroData.map((image, id) => (
                 <img
@@ -102,7 +102,7 @@ const Hero = () => {
                 ></i>
               ))}
             </div>
-            <div className="mt-5 transition-opacity duration-500 ease-in-out opacity-100">
+            <div className="mt-5 mb-6 transition-opacity duration-500 ease-in-out opacity-100">
               <h1 className="text-2xl text-center sm:text-3xl lg:text-4xl md:text-4">
                 {caption}
               </h1>
