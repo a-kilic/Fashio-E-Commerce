@@ -36,13 +36,13 @@ const Hero = () => {
             Where would you like to start?
           </h2>
           <div className="flex">
-            <button className="w-full p-2 mr-2 font-bold text-white bg-black hover:opacity-90">
+            <button className="w-full p-2 mr-2 font-bold text-white transition bg-black rounded hover:opacity-90 hover:-translate-y-1">
               Men
             </button>
-            <button className="w-full p-2 mr-2 font-bold text-white bg-black hover:opacity-90">
+            <button className="w-full p-2 mr-2 font-bold text-white transition bg-black rounded hover:opacity-90 hover:-translate-y-1">
               Woman
             </button>
-            <button className="w-full p-2 font-bold text-white bg-black hover:opacity-90">
+            <button className="w-full p-2 font-bold text-white transition bg-black rounded hover:opacity-90 hover:-translate-y-1">
               Jewelery
             </button>
           </div>
@@ -50,7 +50,7 @@ const Hero = () => {
         {/* Image and Icons/Caption Wrapper */}
         <div className="flex flex-col md:flex-row md:space-x-4">
           {/* Image and Buttons*/}
-          <div className="relative flex justify-center img-wrapper md:w-2/3 h-[30rem]">
+          <div className="relative flex justify-center md:w-2/3 h-[30rem]">
             <div className="flex w-full h-full overflow-hidden">
               {heroData.map((image, id) => (
                 <img
